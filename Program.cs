@@ -36,6 +36,7 @@ else {
 //A (3,6,8); B (2,1,-7), -> 15.84
 
 //A (7,-5, 0); B (1,-1,9) -> 11.53
+/*
 Console.WriteLine ("Координаты точки A:");
 Console.Write ("X: ");
 int ax=int.Parse (Console.ReadLine()!);//не будем хранить в double, Math.Pow прекрасно ест int
@@ -54,3 +55,19 @@ int bz=int.Parse (Console.ReadLine()!);
 
 double d=Math.Sqrt(Math.Pow((ax-bx),2)+Math.Pow((ay-by),2)+Math.Pow((az-bz),2));
 Console.WriteLine ($"A ({ax},{ay},{az}); B ({bx},{by},{bz}) -> {d:f2}");
+*/
+
+//Задача 23
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+//3 -> 1, 8, 27
+//5 -> 1, 8, 27, 64, 125
+
+Console.Write ("Введите N: ");
+int n=int.Parse (Console.ReadLine()!);
+Console.Write ($"{n} -> ");
+for (int i=1; i<=n;i++) {
+    Console.Write (Math.Pow(i,3));
+    if (i<n) Console.Write (", ");
+}
