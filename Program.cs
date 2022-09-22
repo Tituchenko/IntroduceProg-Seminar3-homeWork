@@ -3,7 +3,7 @@
 //14212 -> нет
 //12821 -> да
 //23432 -> да
-
+/*
 int n=5; // Эта наша разрядность, работает с любой
 Console.Write ($"Введите {n}-значное число: "); //Пусть у нас добросовестный пользователь (без проверки разряда)
 int num=int.Parse (Console.ReadLine()!);
@@ -28,6 +28,29 @@ if (polynom) {
 else {
     Console.WriteLine ($"{num} -> нет");
 }
+*/
+//Задача 21
 
+//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
+//A (3,6,8); B (2,1,-7), -> 15.84
 
+//A (7,-5, 0); B (1,-1,9) -> 11.53
+Console.WriteLine ("Координаты точки A:");
+Console.Write ("X: ");
+int ax=int.Parse (Console.ReadLine()!);//не будем хранить в double, Math.Pow прекрасно ест int
+Console.Write ("Y: ");
+int ay=int.Parse (Console.ReadLine()!);
+Console.Write ("Z: ");
+int az=int.Parse (Console.ReadLine()!);
+
+Console.WriteLine ("Координаты точки B:");
+Console.Write ("X: ");
+int bx=int.Parse (Console.ReadLine()!);
+Console.Write ("Y: ");
+int by=int.Parse (Console.ReadLine()!);
+Console.Write ("Z: ");
+int bz=int.Parse (Console.ReadLine()!);
+
+double d=Math.Sqrt(Math.Pow((ax-bx),2)+Math.Pow((ay-by),2)+Math.Pow((az-bz),2));
+Console.WriteLine ($"A ({ax},{ay},{az}); B ({bx},{by},{bz}) -> {d:f2}");
